@@ -1,0 +1,47 @@
+{
+    "manifest_version": 3,
+    "name": "Bili -  The logo identificator",
+    "description": "Hover over any link to see if the domain is registered on Bimi.",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "background": {"service_worker": "background.js"},
+    "content_scripts":[
+        {
+            "js": [     
+                    "extensioner.js", "src/main.js",  "configuration.js"
+                ],
+            "matches": ["*://*/*"], 
+            "match_about_blank": true
+        }
+    ],
+    "content_security_policy":{
+        "extension_page": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+    },
+    "web_accessible_resources": [
+        {
+                        "resources" :   
+                        [   
+                            "src/templates/bili-containers.css", "src/templates/bili-containers.html"
+                        ],
+                        "matches": ["*://*/*"]
+        }
+    ],
+    "icons": {
+        "16":     "logos/bili.png",
+        "32":     "logos/bili.png",
+        "48":     "logos/bili.png",
+        "64":     "logos/bili.png",
+        "128":    "logos/bili.png"
+    },  
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_title": "bili - The logo identificator",
+        "default_icon": {
+            "16":   "logos/bili.png",
+            "32":   "logos/bili.png",
+            "48":   "logos/bili.png",
+            "64":   "logos/bili.png",
+            "128":  "logos/bili.png"
+        }
+    }
+}

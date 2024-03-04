@@ -1,0 +1,49 @@
+.invisible{
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+
+
+.bili-leftContainer{
+    background-color: #ffffff;
+    position: fixed;
+    top: calc(100vh - 100px);
+    left: 20px;
+    box-shadow: 2px 2px 10px grey;
+    border-radius: 5px;
+    z-index: 50000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px ;
+
+    width: 200px;
+    overflow: hidden;
+    height: 50px;
+}
+.bili-rightContainer{
+    background-color: #7de1db;
+    position: fixed;
+    top: calc(100vh - 100px);
+    left: 20px;
+    box-shadow: 2px 2px 10px grey;
+    border-radius: 5px;
+    z-index: 50000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    left: calc(100vw - 20%);
+}
+
+.bili-container-image{
+    height: 50px;
+    border-radius: 3px;
+}
+
+.bili-container-label{
+    font-weight: 600;
+    
+}
